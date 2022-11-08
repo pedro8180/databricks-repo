@@ -1,0 +1,13 @@
+build:
+  no_build: true
+environments:
+  default:
+    workflows:
+      - name: "dbx-demo-job"
+        spark_python_task:
+          python_file: "file://dbx-demo-job.py"
+  test:
+    workflows:
+      - name: "dbx-demo-job"
+        spark_python_task:
+          python_file: "file://dbx-demo-job.py"
